@@ -1,0 +1,11 @@
+version: '2'
+services:
+  sabnzbd:
+    image: datty/sabnzbd-centos:0.1.0
+    ports:
+    - "8080:8080"
+    restart: always
+    volumes:
+            - /mnt/mesos/sab/config:/home/sabnzbd/config
+            - /mnt/Share:/mnt/Share
+            - /mnt/filer:/mnt/filer
